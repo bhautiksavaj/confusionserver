@@ -10,7 +10,7 @@ var promoRouter = require("./routes/promoRouter");
 
 const mongoose = require("mongoose");
 
-const url = "mongodb://localhost:27017/conFusion"; //For local database
+const url = process.env.MONGODB_URI; //For local database
 const connect = mongoose.connect(url);
 
 connect.then(
